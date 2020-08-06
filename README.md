@@ -1,10 +1,12 @@
 # Frequency-Count-app
 It is an application that Displayed the top N words and their frequency of occurrence in in a tabular format using Node and Angularjs basically it accepts a number input N with a Submit button and on entering a value and pressing submit, a request sent to the backend that returns top N most frequently occurring words in the file...
 
+
 Part-1 (Frontend with AngularJS (or Angular 1)):
 Frontend part is a web application created using Angular framework. Here user enters a number N (Number of words) and response will be shown in the form of a table as you can see in the screenshot below:
         After the build page look like this:
 
+ ![](images/part1.png)
  
 
 
@@ -13,12 +15,15 @@ On entering a value and pressing submit, a request is sent to a NodeJS Backend p
 
 
 Part-3 (Test cases):
+
 Case-1 (Blank value):
+
 If user submit a request with blank field in input field then a message will be displayed like “Required” as you can see in screenshot below:
+ ![](images/test1.png)
  
 Case-2 (Negative Value / Other value like character):
 If user submit a negative value and characters then message will be shown like “Only numbers are allowed” as you can see in screenshot below:
-
+ ![](images/test2.png)
  
 Plugins & Libraries used:
     "body-parser": "^1.18.2",
