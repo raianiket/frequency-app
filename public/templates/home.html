@@ -1,0 +1,47 @@
+<div ng-controller="enteringData">
+    <div class="row" style="
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;">
+        <div class="col-md-6 ">
+            <div class="well well-sm ">
+                <form name="cname" novalidate ng-submit="cname.$valid &&getwords()">
+                    <div class="form-group ">
+                        <label for="Number">Enter the Number</label>
+                        <input type="text" class="form-control" name="numbervalidate" ng-model="numbern" placeholder="Enter Number Only Otherwise It Won't Reflect" ng-pattern="/^[0-9]*$/" required>
+                        <span style="color:Red" ng-show="cname.numbervalidate.$error.required"> Required! </span>
+                        <span style="color:Red" ng-show="cname.numbervalidate.$dirty&&cname.numbervalidate.$error.pattern">Only Numbers Are Allowed</span>
+                    </div>
+                    <center><button type="submit" class="btn btn-primary">Submit</button></center>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div ng-show="myData">
+        <h1 style="color: azure;">Words and their frequency of occurrence </h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-12 " >
+                <div class="bg-primary text-white" style="border-style: solid; border-radius: 5px; ">
+                    <div class="table-responsive ">
+                        <table class="table " style="border-collapse: collapse;">
+                            <thead>
+                                <tr style="border-right: solid 1px #f00;">
+                                    <th>Words</th>
+                                    <th>Occurences</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr dir-paginate="item in topnwords | itemsPerPage: pageSize" current-page="currentPage">
+                                    <td>[[item.name]]</td>
+                                    <td>[[item.total]]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <dir-pagination-controls boundary-links="true" template-url="templates/dirPagination.html"></dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
