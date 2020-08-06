@@ -12,7 +12,7 @@ Frontend part is a web application created using Angular framework. Here user en
  
 
 
-# Part-2 (Backend, with Node.js v10.5.0):
+# Part-2 (Backend, with Node.js v12.16.3):
 On entering a value and pressing submit, a request is sent to a NodeJS Backend part where all calculation happening by fetching a file hosted at http://terriblytinytales.com/test.txt and returns the top N most frequently occurring words in this file and returned as a response to Frontend and show in a tabular form(I used dirPagination for table).
 
 
