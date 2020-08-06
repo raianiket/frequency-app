@@ -12,7 +12,7 @@ Part-2 (Backend, with Node.js v10.5.0):
 On entering a value and pressing submit, a request is sent to a NodeJS Backend part where all calculation happening by fetching a file hosted at http://terriblytinytales.com/test.txt and returns the top N most frequently occurring words in this file and returned as a response to Frontend and show in a tabular form(I used dirPagination for table).
 
 
-Part-2 (Test cases):
+Part-3 (Test cases):
 Case-1 (Blank value):
 If user submit a request with blank field in input field then a message will be displayed like “Required” as you can see in screenshot below:
  
